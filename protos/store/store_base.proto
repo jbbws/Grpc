@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package core;
+
+option csharp_namespace = "Grpc.Store.StoreService.Base";
+
+enum Trimestr {
+    FIRST = 0;
+    SECOND = 1;
+    THIRD = 2;
+    FOURTH = 3;
+}
+
+message Document {
+    int32 id = 1;
+    Company org = 2;
+    Trimestr period = 3;
+    repeated Series data = 4;
+}
+
+message Series {
+    int32 code = 1;
+    int64 value = 2;
+    string name = 3;
+}
+
+message Company {
+    int32 id = 1;
+    string name = 2;
+}

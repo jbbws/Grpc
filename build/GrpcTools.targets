@@ -1,0 +1,18 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <GrpcToolsVersion>@(PackageReference-&gt;WithMetadataValue("Identity", "Grpc.Tools")-&gt;Metadata("Version"))</GrpcToolsVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(OS)' == 'Unix'">
+        <Protoc>$(HOME)/.nuget/packages/grpc.tools/$(GrpcToolsVersion)/tools/linux_x64/protoc</Protoc>
+        <ProtocGenGrpcPlugin>$(HOME)/.nuget/packages/grpc.tools/$(GrpcToolsVersion)/tools/linux_x64/grpc_csharp_plugin</ProtocGenGrpcPlugin>
+        <ProtoGenerateTool>$(Protoc) --proto_path=$(MSBuildProjectDirectory)/../protos --csharp_out=$(MSBuildProjectDirectory) --grpc_out=$(MSBuildProjectDirectory) --plugin=protoc-gen-grpc=$(ProtocGenGrpcPlugin)</ProtoGenerateTool>
+    </PropertyGroup>
+    <Target Name="GenerateApi" DependsOnTargets="Restore" BeforeTargets="Build;Publish">
+        <Error Condition="$(GrpcToolsVersion) == ''" Text="Current project has not references Grpc.Tools." />
+        <Error Condition="@(ProtoFiles) == ''" Text="Current project has not included proto definitions. " />
+        <Message Importance="High" Text="Generate C# classes by proto definitions. Found @(ProtoFiles->Count()) proto definitions:" />
+        <Message Importance="High" Text="$(TAB)$([System.IO.Path]::GetFullPath('%(ProtoFiles.Identity)'))" />
+        <Exec Condition="'$(OS)' == 'Unix'" Command="chmod +x $(Protoc) $(ProtocGenGrpcPlugin)" />
+        <Exec Command="$(ProtoGenerateTool) %(ProtoFiles.Identity)" />
+  </Target>
+</Project>

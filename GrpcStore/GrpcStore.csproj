@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.5.1" />
+    <PackageReference Include="Grpc.Core" Version="1.11.0" />
+    <PackageReference Include="Grpc.Tools" Version="1.11.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GrpcBase\GrpcBase.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProtoFiles Include="$(MSBuildProjectDirectory)\..\protos\store\*.proto" />
+    <None Include="@(ProtoFiles)" />
+  </ItemGroup>
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <Import Project="$(MSBuildProjectDirectory)\..\build\GrpcTools.targets" Condition="Exists('$(MSBuildProjectDirectory)\..\build\GrpcTools.targets')" />
+</Project>

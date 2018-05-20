@@ -1,0 +1,25 @@
+syntax  = "proto3";
+
+package express;
+option csharp_namespace = "Grpc.Express.ExpressService";
+message GetBusinessActivityRequest {
+    int32 base = 1;
+    int32 current = 2;
+}
+message ActivityRowResponse {
+    double base = 1;
+    double current = 2;
+    double dinamyc = 3;
+}
+message GetBusinessActivityResponse {
+    ActivityRowResponse TurnOfDeb = 1;
+    ActivityRowResponse TimeRedeptionDeb = 2;
+    ActivityRowResponse TurnStock = 3;
+    ActivityRowResponse TimeStock = 4;
+    ActivityRowResponse TurnCred = 5;
+    ActivityRowResponse TimeCred = 6;
+    ActivityRowResponse FinStrength = 7; 
+}
+service ExpessAnalyzeService {
+    rpc GetBusinessActivityByYearPair(GetBusinessActivityRequest) returns (GetBusinessActivityResponse);
+}

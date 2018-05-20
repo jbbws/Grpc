@@ -1,0 +1,41 @@
+syntax  = "proto3";
+
+package store;
+option csharp_namespace = "Grpc.Store.StoreService";
+import "store/store_base.proto";
+
+message GetCompaniesRequest {
+    int32 id = 1;
+    string name = 2;
+}
+
+message GetCompaniesResponse {
+    repeated core.Company org = 1;
+}
+
+message GetDocumentsRequest {
+    int32 id = 1;
+    string company = 2;
+    core.Trimestr period = 3;
+}
+
+message GetDocumentsResponse {
+    repeated core.Document docs = 1;
+}
+
+message GetSeriesRequest {
+    int32 docId = 1;
+    bool withName = 2; 
+    repeated int32 codes = 3;
+}
+
+message GetSeriesResponse {
+    repeated core.Series data = 1;
+}
+
+service StoreService {
+    rpc GetCompanies(GetCompaniesRequest) returns (GetCompaniesResponse);
+    rpc GetDocuments(GetDocumentsRequest) returns (GetDocumentsResponse);
+    rpc GetSeries(GetSeriesRequest) returns (GetSeriesResponse);
+
+}
