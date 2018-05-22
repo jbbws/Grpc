@@ -8,7 +8,12 @@ message GetCompaniesRequest {
     int32 id = 1;
     string name = 2;
 }
+<<<<<<< HEAD
 message CompanySearch {
+=======
+
+message CompanyFilter {
+>>>>>>> ab661e96f3a4ef8390212c766ec9e4a5bc30de8b
     core.Company filter = 1;
     core.Company projection = 2;
 } 
