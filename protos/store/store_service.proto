@@ -9,6 +9,14 @@ message GetCompaniesRequest {
     string name = 2;
 }
 
+message SearchCompanyDto {
+
+}
+message CompanyFilter {
+    core.Company filter = 1;
+    core.Company projection = 2;
+} 
+
 message GetCompaniesResponse {
     repeated core.Company org = 1;
 }
@@ -34,7 +42,7 @@ message GetSeriesResponse {
 }
 
 service StoreService {
-    rpc GetCompanies(GetCompaniesRequest) returns (GetCompaniesResponse);
+    rpc GetCompanies(CompanyFilter) returns (GetCompaniesResponse);
     rpc GetDocuments(GetDocumentsRequest) returns (GetDocumentsResponse);
     rpc GetSeries(GetSeriesRequest) returns (GetSeriesResponse);
 
