@@ -24,24 +24,26 @@ namespace Grpc.Store.StoreService {
           string.Concat(
             "ChlzdG9yZS9zdG9yZV9zZXJ2aWNlLnByb3RvEgVzdG9yZRoWc3RvcmUvc3Rv",
             "cmVfYmFzZS5wcm90byIvChNHZXRDb21wYW5pZXNSZXF1ZXN0EgoKAmlkGAEg",
-            "ASgFEgwKBG5hbWUYAiABKAkiMgoUR2V0Q29tcGFuaWVzUmVzcG9uc2USGgoD",
-            "b3JnGAEgAygLMg0uY29yZS5Db21wYW55IlIKE0dldERvY3VtZW50c1JlcXVl",
-            "c3QSCgoCaWQYASABKAUSDwoHY29tcGFueRgCIAEoCRIeCgZwZXJpb2QYAyAB",
-            "KA4yDi5jb3JlLlRyaW1lc3RyIjQKFEdldERvY3VtZW50c1Jlc3BvbnNlEhwK",
-            "BGRvY3MYASADKAsyDi5jb3JlLkRvY3VtZW50IkIKEEdldFNlcmllc1JlcXVl",
-            "c3QSDQoFZG9jSWQYASABKAUSEAoId2l0aE5hbWUYAiABKAgSDQoFY29kZXMY",
-            "AyADKAUiLwoRR2V0U2VyaWVzUmVzcG9uc2USGgoEZGF0YRgBIAMoCzIMLmNv",
-            "cmUuU2VyaWVzMuABCgxTdG9yZVNlcnZpY2USRwoMR2V0Q29tcGFuaWVzEhou",
-            "c3RvcmUuR2V0Q29tcGFuaWVzUmVxdWVzdBobLnN0b3JlLkdldENvbXBhbmll",
-            "c1Jlc3BvbnNlEkcKDEdldERvY3VtZW50cxIaLnN0b3JlLkdldERvY3VtZW50",
-            "c1JlcXVlc3QaGy5zdG9yZS5HZXREb2N1bWVudHNSZXNwb25zZRI+CglHZXRT",
-            "ZXJpZXMSFy5zdG9yZS5HZXRTZXJpZXNSZXF1ZXN0Ghguc3RvcmUuR2V0U2Vy",
-            "aWVzUmVzcG9uc2VCGqoCF0dycGMuU3RvcmUuU3RvcmVTZXJ2aWNlYgZwcm90",
-            "bzM="));
+            "ASgFEgwKBG5hbWUYAiABKAkiUQoNQ29tcGFueVNlYXJjaBIdCgZmaWx0ZXIY",
+            "ASABKAsyDS5jb3JlLkNvbXBhbnkSIQoKcHJvamVjdGlvbhgCIAEoCzINLmNv",
+            "cmUuQ29tcGFueSIyChRHZXRDb21wYW5pZXNSZXNwb25zZRIaCgNvcmcYASAD",
+            "KAsyDS5jb3JlLkNvbXBhbnkiUgoTR2V0RG9jdW1lbnRzUmVxdWVzdBIKCgJp",
+            "ZBgBIAEoBRIPCgdjb21wYW55GAIgASgJEh4KBnBlcmlvZBgDIAEoDjIOLmNv",
+            "cmUuVHJpbWVzdHIiNAoUR2V0RG9jdW1lbnRzUmVzcG9uc2USHAoEZG9jcxgB",
+            "IAMoCzIOLmNvcmUuRG9jdW1lbnQiQgoQR2V0U2VyaWVzUmVxdWVzdBINCgVk",
+            "b2NJZBgBIAEoBRIQCgh3aXRoTmFtZRgCIAEoCBINCgVjb2RlcxgDIAMoBSIv",
+            "ChFHZXRTZXJpZXNSZXNwb25zZRIaCgRkYXRhGAEgAygLMgwuY29yZS5TZXJp",
+            "ZXMy2gEKDFN0b3JlU2VydmljZRJBCgxHZXRDb21wYW5pZXMSFC5zdG9yZS5D",
+            "b21wYW55U2VhcmNoGhsuc3RvcmUuR2V0Q29tcGFuaWVzUmVzcG9uc2USRwoM",
+            "R2V0RG9jdW1lbnRzEhouc3RvcmUuR2V0RG9jdW1lbnRzUmVxdWVzdBobLnN0",
+            "b3JlLkdldERvY3VtZW50c1Jlc3BvbnNlEj4KCUdldFNlcmllcxIXLnN0b3Jl",
+            "LkdldFNlcmllc1JlcXVlc3QaGC5zdG9yZS5HZXRTZXJpZXNSZXNwb25zZUIa",
+            "qgIXR3JwYy5TdG9yZS5TdG9yZVNlcnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Grpc.Store.StoreService.Base.StoreBaseReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Store.StoreService.GetCompaniesRequest), global::Grpc.Store.StoreService.GetCompaniesRequest.Parser, new[]{ "Id", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Store.StoreService.CompanySearch), global::Grpc.Store.StoreService.CompanySearch.Parser, new[]{ "Filter", "Projection" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Store.StoreService.GetCompaniesResponse), global::Grpc.Store.StoreService.GetCompaniesResponse.Parser, new[]{ "Org" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Store.StoreService.GetDocumentsRequest), global::Grpc.Store.StoreService.GetDocumentsRequest.Parser, new[]{ "Id", "Company", "Period" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Store.StoreService.GetDocumentsResponse), global::Grpc.Store.StoreService.GetDocumentsResponse.Parser, new[]{ "Docs" }, null, null, null),
@@ -198,6 +200,163 @@ namespace Grpc.Store.StoreService {
 
   }
 
+  public sealed partial class CompanySearch : pb::IMessage<CompanySearch> {
+    private static readonly pb::MessageParser<CompanySearch> _parser = new pb::MessageParser<CompanySearch>(() => new CompanySearch());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CompanySearch> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Grpc.Store.StoreService.StoreServiceReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CompanySearch() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CompanySearch(CompanySearch other) : this() {
+      Filter = other.filter_ != null ? other.Filter.Clone() : null;
+      Projection = other.projection_ != null ? other.Projection.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CompanySearch Clone() {
+      return new CompanySearch(this);
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 1;
+    private global::Grpc.Store.StoreService.Base.Company filter_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Grpc.Store.StoreService.Base.Company Filter {
+      get { return filter_; }
+      set {
+        filter_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "projection" field.</summary>
+    public const int ProjectionFieldNumber = 2;
+    private global::Grpc.Store.StoreService.Base.Company projection_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Grpc.Store.StoreService.Base.Company Projection {
+      get { return projection_; }
+      set {
+        projection_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CompanySearch);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CompanySearch other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Filter, other.Filter)) return false;
+      if (!object.Equals(Projection, other.Projection)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (filter_ != null) hash ^= Filter.GetHashCode();
+      if (projection_ != null) hash ^= Projection.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (filter_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Filter);
+      }
+      if (projection_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Projection);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (filter_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Filter);
+      }
+      if (projection_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Projection);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CompanySearch other) {
+      if (other == null) {
+        return;
+      }
+      if (other.filter_ != null) {
+        if (filter_ == null) {
+          filter_ = new global::Grpc.Store.StoreService.Base.Company();
+        }
+        Filter.MergeFrom(other.Filter);
+      }
+      if (other.projection_ != null) {
+        if (projection_ == null) {
+          projection_ = new global::Grpc.Store.StoreService.Base.Company();
+        }
+        Projection.MergeFrom(other.Projection);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (filter_ == null) {
+              filter_ = new global::Grpc.Store.StoreService.Base.Company();
+            }
+            input.ReadMessage(filter_);
+            break;
+          }
+          case 18: {
+            if (projection_ == null) {
+              projection_ = new global::Grpc.Store.StoreService.Base.Company();
+            }
+            input.ReadMessage(projection_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class GetCompaniesResponse : pb::IMessage<GetCompaniesResponse> {
     private static readonly pb::MessageParser<GetCompaniesResponse> _parser = new pb::MessageParser<GetCompaniesResponse>(() => new GetCompaniesResponse());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -205,7 +364,7 @@ namespace Grpc.Store.StoreService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.Store.StoreService.StoreServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Grpc.Store.StoreService.StoreServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -314,7 +473,7 @@ namespace Grpc.Store.StoreService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.Store.StoreService.StoreServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Grpc.Store.StoreService.StoreServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -487,7 +646,7 @@ namespace Grpc.Store.StoreService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.Store.StoreService.StoreServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Grpc.Store.StoreService.StoreServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -596,7 +755,7 @@ namespace Grpc.Store.StoreService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.Store.StoreService.StoreServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Grpc.Store.StoreService.StoreServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -762,7 +921,7 @@ namespace Grpc.Store.StoreService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.Store.StoreService.StoreServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Grpc.Store.StoreService.StoreServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

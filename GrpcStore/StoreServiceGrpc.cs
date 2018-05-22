@@ -12,18 +12,18 @@ namespace Grpc.Store.StoreService {
   {
     static readonly string __ServiceName = "store.StoreService";
 
-    static readonly grpc::Marshaller<global::Grpc.Store.StoreService.GetCompaniesRequest> __Marshaller_GetCompaniesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grpc.Store.StoreService.GetCompaniesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grpc.Store.StoreService.CompanySearch> __Marshaller_CompanySearch = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grpc.Store.StoreService.CompanySearch.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Grpc.Store.StoreService.GetCompaniesResponse> __Marshaller_GetCompaniesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grpc.Store.StoreService.GetCompaniesResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Grpc.Store.StoreService.GetDocumentsRequest> __Marshaller_GetDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grpc.Store.StoreService.GetDocumentsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Grpc.Store.StoreService.GetDocumentsResponse> __Marshaller_GetDocumentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grpc.Store.StoreService.GetDocumentsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Grpc.Store.StoreService.GetSeriesRequest> __Marshaller_GetSeriesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grpc.Store.StoreService.GetSeriesRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Grpc.Store.StoreService.GetSeriesResponse> __Marshaller_GetSeriesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grpc.Store.StoreService.GetSeriesResponse.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Grpc.Store.StoreService.GetCompaniesRequest, global::Grpc.Store.StoreService.GetCompaniesResponse> __Method_GetCompanies = new grpc::Method<global::Grpc.Store.StoreService.GetCompaniesRequest, global::Grpc.Store.StoreService.GetCompaniesResponse>(
+    static readonly grpc::Method<global::Grpc.Store.StoreService.CompanySearch, global::Grpc.Store.StoreService.GetCompaniesResponse> __Method_GetCompanies = new grpc::Method<global::Grpc.Store.StoreService.CompanySearch, global::Grpc.Store.StoreService.GetCompaniesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetCompanies",
-        __Marshaller_GetCompaniesRequest,
+        __Marshaller_CompanySearch,
         __Marshaller_GetCompaniesResponse);
 
     static readonly grpc::Method<global::Grpc.Store.StoreService.GetDocumentsRequest, global::Grpc.Store.StoreService.GetDocumentsResponse> __Method_GetDocuments = new grpc::Method<global::Grpc.Store.StoreService.GetDocumentsRequest, global::Grpc.Store.StoreService.GetDocumentsResponse>(
@@ -49,7 +49,7 @@ namespace Grpc.Store.StoreService {
     /// <summary>Base class for server-side implementations of StoreService</summary>
     public abstract partial class StoreServiceBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Grpc.Store.StoreService.GetCompaniesResponse> GetCompanies(global::Grpc.Store.StoreService.GetCompaniesRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Grpc.Store.StoreService.GetCompaniesResponse> GetCompanies(global::Grpc.Store.StoreService.CompanySearch request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -89,19 +89,19 @@ namespace Grpc.Store.StoreService {
       {
       }
 
-      public virtual global::Grpc.Store.StoreService.GetCompaniesResponse GetCompanies(global::Grpc.Store.StoreService.GetCompaniesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Grpc.Store.StoreService.GetCompaniesResponse GetCompanies(global::Grpc.Store.StoreService.CompanySearch request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCompanies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Grpc.Store.StoreService.GetCompaniesResponse GetCompanies(global::Grpc.Store.StoreService.GetCompaniesRequest request, grpc::CallOptions options)
+      public virtual global::Grpc.Store.StoreService.GetCompaniesResponse GetCompanies(global::Grpc.Store.StoreService.CompanySearch request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCompanies, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Grpc.Store.StoreService.GetCompaniesResponse> GetCompaniesAsync(global::Grpc.Store.StoreService.GetCompaniesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Grpc.Store.StoreService.GetCompaniesResponse> GetCompaniesAsync(global::Grpc.Store.StoreService.CompanySearch request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCompaniesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Grpc.Store.StoreService.GetCompaniesResponse> GetCompaniesAsync(global::Grpc.Store.StoreService.GetCompaniesRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Grpc.Store.StoreService.GetCompaniesResponse> GetCompaniesAsync(global::Grpc.Store.StoreService.CompanySearch request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCompanies, null, options, request);
       }
