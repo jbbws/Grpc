@@ -9,9 +9,6 @@ message GetCompaniesRequest {
     string name = 2;
 }
 
-message SearchCompanyDto {
-
-}
 message CompanyFilter {
     core.Company filter = 1;
     core.Company projection = 2;
