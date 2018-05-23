@@ -19,7 +19,7 @@ message CompanyData {
 } 
 
 message DocMeasure {
-    int code = 1;
+    int32 code = 1;
 }
 
 message Measuresments {
