@@ -4,19 +4,27 @@ package store;
 option csharp_namespace = "Grpc.Store.StoreService";
 import "store/store_base.proto";
 
-message GetCompaniesRequest {
-    int32 id = 1;
+message CompaniesInfo {
+    int32 code = 1;
     string name = 2;
 }
-message CompanySearch {
-    core.Company filter = 1;
-    core.Company projection = 2;
-} 
 
-message GetCompaniesResponse {
-    repeated core.Company org = 1;
+message CompaniesInfoList {
+    repeated CompaniesInfo data = 1;   
 }
 
+message CompanyData {
+    core.Company org = 1;
+    repeated core.Document docs = 2; 
+} 
+
+message DocMeasure {
+    int code = 1;
+}
+
+message Measuresments {
+    repeated DocMeasure data = 1;
+}
 message GetDocumentsRequest {
     int32 id = 1;
     string company = 2;
@@ -38,8 +46,8 @@ message GetSeriesResponse {
 }
 
 service StoreService {
-    rpc GetCompanies(CompanySearch) returns (GetCompaniesResponse);
-    rpc GetDocuments(GetDocumentsRequest) returns (GetDocumentsResponse);
-    rpc GetSeries(GetSeriesRequest) returns (GetSeriesResponse);
-
+    rpc GetCompanyList(CompaniesInfo) returns (CompaniesInfoList); 
+    rpc GetCompanyData(CompaniesInfo) returns (CompanyData);
+    rpc GetYears(DocMeasure) returns (Measuresments);
+    rpc GetQuart(DocMeasure) returns (Measuresments);
 }
