@@ -13,41 +13,16 @@ message CompaniesInfoList {
     repeated CompaniesInfo data = 1;   
 }
 
+message CompanyById {
+    int32 code = 1;
+}
+
 message CompanyData {
     core.Company org = 1;
     repeated core.Document docs = 2; 
 } 
 
-message DocMeasure {
-    int32 code = 1;
-}
-
-message Measuresments {
-    repeated DocMeasure data = 1;
-}
-message GetDocumentsRequest {
-    int32 id = 1;
-    string company = 2;
-    core.Trimestr period = 3;
-}
-
-message GetDocumentsResponse {
-    repeated core.Document docs = 1;
-}
-
-message GetSeriesRequest {
-    int32 docId = 1;
-    bool withName = 2; 
-    repeated int32 codes = 3;
-}
-
-message GetSeriesResponse {
-    repeated core.Series data = 1;
-}
-
 service StoreService {
     rpc GetCompanyList(CompaniesInfo) returns (CompaniesInfoList); 
-    rpc GetCompanyData(CompaniesInfo) returns (CompanyData);
-    rpc GetYears(DocMeasure) returns (Measuresments);
-    rpc GetQuart(DocMeasure) returns (Measuresments);
+    rpc GetCompanyData(CompanyById) returns (CompanyData);
 }

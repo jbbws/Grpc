@@ -25,7 +25,7 @@ message Series {
 }
 
 message Company {
-    int32 id = 1;
+    int32 code = 1;
     string name = 2;
     string form = 3;
     string industry = 4;
