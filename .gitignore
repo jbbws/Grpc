@@ -64,3 +64,6 @@ bld/
 *.[Cc]ache
 # but keep track of directories ending in .cache
 !*.[Cc]ache/
+GrpcStore/StoreServiceGrpc.cs
+GrpcStore/StoreService.cs
+GrpcStore/StoreBase.cs
