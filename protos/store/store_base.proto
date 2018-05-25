@@ -16,10 +16,10 @@ message Document {
     repeated Series data = 2;
 }
  message DocumentMeta {
-    int32 id = 1;
+    string id = 1;
     int32 org = 2;
     Trimestr period = 3;
-    int32 yead = 4;
+    int32 year = 4;
  }
 
 message Series {
