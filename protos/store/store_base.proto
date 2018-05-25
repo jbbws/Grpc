@@ -12,11 +12,14 @@ enum Trimestr {
 }
 
 message Document {
+    DocumentMeta info = 1;
+    repeated Series data = 2;
+}
+ message DocumentMeta {
     int32 id = 1;
     Company org = 2;
     Trimestr period = 3;
-    repeated Series data = 4;
-}
+ }
 
 message Series {
     int32 code = 1;

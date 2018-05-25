@@ -19,7 +19,7 @@ message CompanyById {
 
 message CompanyData {
     core.Company org = 1;
-    repeated core.Document docs = 2; 
+    repeated core.DocumentMeta docs = 2; 
 } 
 
 service StoreService {
