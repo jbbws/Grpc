@@ -4,12 +4,6 @@ package core;
 
 option csharp_namespace = "Grpc.Store.StoreService.Base";
 
-enum Trimestr {
-    FIRST = 0;
-    SECOND = 1;
-    THIRD = 2;
-    FOURTH = 3;
-}
 
 message Document {
     DocumentMeta info = 1;
@@ -18,7 +12,7 @@ message Document {
  message DocumentMeta {
     string id = 1;
     int32 org = 2;
-    Trimestr period = 3;
+    int32 period = 3;
     int32 year = 4;
  }
 
