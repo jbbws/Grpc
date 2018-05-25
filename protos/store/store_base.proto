@@ -19,6 +19,7 @@ message Document {
     int32 id = 1;
     Company org = 2;
     Trimestr period = 3;
+    int32 yead = 4;
  }
 
 message Series {
