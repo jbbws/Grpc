@@ -17,6 +17,10 @@ message CompanyById {
     int32 code = 1;
 }
 
+message CompanyDataSrc {
+    CompanyData data = 1;
+}
+
 message CompanyData {
     core.Company org = 1;
     repeated core.DocumentMeta docs = 2; 
@@ -24,5 +28,5 @@ message CompanyData {
 
 service StoreService {
     rpc GetCompanyList(CompaniesInfo) returns (CompaniesInfoList); 
-    rpc GetCompanyData(CompanyById) returns (CompanyData);
+    rpc GetCompanyData(CompanyById) returns (CompanyDataSrc);
 }
