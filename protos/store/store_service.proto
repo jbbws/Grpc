@@ -13,6 +13,14 @@ message CompaniesInfoList {
     repeated CompaniesInfo data = 1;   
 }
 
+message CompaniesGrid {
+    repeated core.Company data = 1;
+}
+
+message DocsGrid {
+    repeated core.DocumentMeta data  = 1;
+}
+
 message CompanyById {
     int32 code = 1;
 }
@@ -27,6 +35,8 @@ message CompanyData {
 } 
 
 service StoreService {
-    rpc GetCompanyList(CompaniesInfo) returns (CompaniesInfoList); 
-    rpc GetCompanyData(CompanyById) returns (CompanyDataSrc);
+    rpc GetCompanyList(CompaniesInfo) returns (CompaniesInfoList);  //to ComboBox
+    rpc GetCompanyData(CompanyById) returns (CompanyDataSrc); //to ViewmModel
+    rpc GetCompanyGrid(CompaniesInfo) returns (CompaniesGrid); // to CompanyGrid
+    rpc GetDocsGrid(CompanyById) returns (DocsGrid); // to DocsGird
 }
