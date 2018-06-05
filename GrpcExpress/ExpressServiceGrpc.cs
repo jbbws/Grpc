@@ -7,89 +7,89 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Grpc.Express.ExpressService {
-  public static partial class ExpessAnalyzeService
+namespace Grpc.Business.ExpressService {
+  public static partial class ExpessService
   {
-    static readonly string __ServiceName = "express.ExpessAnalyzeService";
+    static readonly string __ServiceName = "express.ExpessService";
 
-    static readonly grpc::Marshaller<global::Grpc.Express.ExpressService.GetBusinessActivityRequest> __Marshaller_GetBusinessActivityRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grpc.Express.ExpressService.GetBusinessActivityRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Grpc.Express.ExpressService.GetBusinessActivityResponse> __Marshaller_GetBusinessActivityResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grpc.Express.ExpressService.GetBusinessActivityResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grpc.Business.ExpressService.DocId> __Marshaller_DocId = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grpc.Business.ExpressService.DocId.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Grpc.Business.ExpressService.ActiveData> __Marshaller_ActiveData = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Grpc.Business.ExpressService.ActiveData.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Grpc.Express.ExpressService.GetBusinessActivityRequest, global::Grpc.Express.ExpressService.GetBusinessActivityResponse> __Method_GetBusinessActivityByYearPair = new grpc::Method<global::Grpc.Express.ExpressService.GetBusinessActivityRequest, global::Grpc.Express.ExpressService.GetBusinessActivityResponse>(
+    static readonly grpc::Method<global::Grpc.Business.ExpressService.DocId, global::Grpc.Business.ExpressService.ActiveData> __Method_GetActive = new grpc::Method<global::Grpc.Business.ExpressService.DocId, global::Grpc.Business.ExpressService.ActiveData>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetBusinessActivityByYearPair",
-        __Marshaller_GetBusinessActivityRequest,
-        __Marshaller_GetBusinessActivityResponse);
+        "GetActive",
+        __Marshaller_DocId,
+        __Marshaller_ActiveData);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Grpc.Express.ExpressService.ExpressServiceReflection.Descriptor.Services[0]; }
+      get { return global::Grpc.Business.ExpressService.ExpressServiceReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of ExpessAnalyzeService</summary>
-    public abstract partial class ExpessAnalyzeServiceBase
+    /// <summary>Base class for server-side implementations of ExpessService</summary>
+    public abstract partial class ExpessServiceBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Grpc.Express.ExpressService.GetBusinessActivityResponse> GetBusinessActivityByYearPair(global::Grpc.Express.ExpressService.GetBusinessActivityRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Grpc.Business.ExpressService.ActiveData> GetActive(global::Grpc.Business.ExpressService.DocId request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
     }
 
-    /// <summary>Client for ExpessAnalyzeService</summary>
-    public partial class ExpessAnalyzeServiceClient : grpc::ClientBase<ExpessAnalyzeServiceClient>
+    /// <summary>Client for ExpessService</summary>
+    public partial class ExpessServiceClient : grpc::ClientBase<ExpessServiceClient>
     {
-      /// <summary>Creates a new client for ExpessAnalyzeService</summary>
+      /// <summary>Creates a new client for ExpessService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public ExpessAnalyzeServiceClient(grpc::Channel channel) : base(channel)
+      public ExpessServiceClient(grpc::Channel channel) : base(channel)
       {
       }
-      /// <summary>Creates a new client for ExpessAnalyzeService that uses a custom <c>CallInvoker</c>.</summary>
+      /// <summary>Creates a new client for ExpessService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public ExpessAnalyzeServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      public ExpessServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
-      protected ExpessAnalyzeServiceClient() : base()
+      protected ExpessServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
-      protected ExpessAnalyzeServiceClient(ClientBaseConfiguration configuration) : base(configuration)
+      protected ExpessServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
 
-      public virtual global::Grpc.Express.ExpressService.GetBusinessActivityResponse GetBusinessActivityByYearPair(global::Grpc.Express.ExpressService.GetBusinessActivityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Grpc.Business.ExpressService.ActiveData GetActive(global::Grpc.Business.ExpressService.DocId request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetBusinessActivityByYearPair(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetActive(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Grpc.Express.ExpressService.GetBusinessActivityResponse GetBusinessActivityByYearPair(global::Grpc.Express.ExpressService.GetBusinessActivityRequest request, grpc::CallOptions options)
+      public virtual global::Grpc.Business.ExpressService.ActiveData GetActive(global::Grpc.Business.ExpressService.DocId request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_GetBusinessActivityByYearPair, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_GetActive, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Grpc.Express.ExpressService.GetBusinessActivityResponse> GetBusinessActivityByYearPairAsync(global::Grpc.Express.ExpressService.GetBusinessActivityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Grpc.Business.ExpressService.ActiveData> GetActiveAsync(global::Grpc.Business.ExpressService.DocId request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetBusinessActivityByYearPairAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetActiveAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Grpc.Express.ExpressService.GetBusinessActivityResponse> GetBusinessActivityByYearPairAsync(global::Grpc.Express.ExpressService.GetBusinessActivityRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Grpc.Business.ExpressService.ActiveData> GetActiveAsync(global::Grpc.Business.ExpressService.DocId request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_GetBusinessActivityByYearPair, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_GetActive, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
-      protected override ExpessAnalyzeServiceClient NewInstance(ClientBaseConfiguration configuration)
+      protected override ExpessServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
-        return new ExpessAnalyzeServiceClient(configuration);
+        return new ExpessServiceClient(configuration);
       }
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static grpc::ServerServiceDefinition BindService(ExpessAnalyzeServiceBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(ExpessServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_GetBusinessActivityByYearPair, serviceImpl.GetBusinessActivityByYearPair).Build();
+          .AddMethod(__Method_GetActive, serviceImpl.GetActive).Build();
     }
 
   }

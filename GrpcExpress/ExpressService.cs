@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Grpc.Express.ExpressService {
+namespace Grpc.Business.ExpressService {
 
   /// <summary>Holder for reflection information generated from express/express_service.proto</summary>
   public static partial class ExpressServiceReflection {
@@ -22,43 +22,36 @@ namespace Grpc.Express.ExpressService {
     static ExpressServiceReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1leHByZXNzL2V4cHJlc3Nfc2VydmljZS5wcm90bxIHZXhwcmVzcyI7ChpH",
-            "ZXRCdXNpbmVzc0FjdGl2aXR5UmVxdWVzdBIMCgRiYXNlGAEgASgFEg8KB2N1",
-            "cnJlbnQYAiABKAUiRQoTQWN0aXZpdHlSb3dSZXNwb25zZRIMCgRiYXNlGAEg",
-            "ASgBEg8KB2N1cnJlbnQYAiABKAESDwoHZGluYW15YxgDIAEoASL7AgobR2V0",
-            "QnVzaW5lc3NBY3Rpdml0eVJlc3BvbnNlEi8KCVR1cm5PZkRlYhgBIAEoCzIc",
-            "LmV4cHJlc3MuQWN0aXZpdHlSb3dSZXNwb25zZRI2ChBUaW1lUmVkZXB0aW9u",
-            "RGViGAIgASgLMhwuZXhwcmVzcy5BY3Rpdml0eVJvd1Jlc3BvbnNlEi8KCVR1",
-            "cm5TdG9jaxgDIAEoCzIcLmV4cHJlc3MuQWN0aXZpdHlSb3dSZXNwb25zZRIv",
-            "CglUaW1lU3RvY2sYBCABKAsyHC5leHByZXNzLkFjdGl2aXR5Um93UmVzcG9u",
-            "c2USLgoIVHVybkNyZWQYBSABKAsyHC5leHByZXNzLkFjdGl2aXR5Um93UmVz",
-            "cG9uc2USLgoIVGltZUNyZWQYBiABKAsyHC5leHByZXNzLkFjdGl2aXR5Um93",
-            "UmVzcG9uc2USMQoLRmluU3RyZW5ndGgYByABKAsyHC5leHByZXNzLkFjdGl2",
-            "aXR5Um93UmVzcG9uc2UyggEKFEV4cGVzc0FuYWx5emVTZXJ2aWNlEmoKHUdl",
-            "dEJ1c2luZXNzQWN0aXZpdHlCeVllYXJQYWlyEiMuZXhwcmVzcy5HZXRCdXNp",
-            "bmVzc0FjdGl2aXR5UmVxdWVzdBokLmV4cHJlc3MuR2V0QnVzaW5lc3NBY3Rp",
-            "dml0eVJlc3BvbnNlQh6qAhtHcnBjLkV4cHJlc3MuRXhwcmVzc1NlcnZpY2Vi",
-            "BnByb3RvMw=="));
+            "Ch1leHByZXNzL2V4cHJlc3Nfc2VydmljZS5wcm90bxIHZXhwcmVzcyIVCgVE",
+            "b2NJZBIMCgRjb2RlGAEgASgFItIBCgpBY3RpdmVEYXRhEhwKBXRvdGFsGAEg",
+            "ASgLMg0uZXhwcmVzcy5QYWlyEhoKA3phcBgCIAEoCzINLmV4cHJlc3MuUGFp",
+            "chIaCgNuZHMYAyABKAsyDS5leHByZXNzLlBhaXISGgoDZGViGAQgASgLMg0u",
+            "ZXhwcmVzcy5QYWlyEhoKA2ZpbhgFIAEoCzINLmV4cHJlc3MuUGFpchIaCgNt",
+            "b24YBiABKAsyDS5leHByZXNzLlBhaXISGgoDb3RoGAcgASgLMg0uZXhwcmVz",
+            "cy5QYWlyIjAKBFBhaXISCwoDa2V5GAEgASgFEg0KBXZhbHVlGAIgASgCEgwK",
+            "BG5hbWUYAyABKAkyQQoNRXhwZXNzU2VydmljZRIwCglHZXRBY3RpdmUSDi5l",
+            "eHByZXNzLkRvY0lkGhMuZXhwcmVzcy5BY3RpdmVEYXRhQh+qAhxHcnBjLkJ1",
+            "c2luZXNzLkV4cHJlc3NTZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Express.ExpressService.GetBusinessActivityRequest), global::Grpc.Express.ExpressService.GetBusinessActivityRequest.Parser, new[]{ "Base", "Current" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Express.ExpressService.ActivityRowResponse), global::Grpc.Express.ExpressService.ActivityRowResponse.Parser, new[]{ "Base", "Current", "Dinamyc" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Express.ExpressService.GetBusinessActivityResponse), global::Grpc.Express.ExpressService.GetBusinessActivityResponse.Parser, new[]{ "TurnOfDeb", "TimeRedeptionDeb", "TurnStock", "TimeStock", "TurnCred", "TimeCred", "FinStrength" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Business.ExpressService.DocId), global::Grpc.Business.ExpressService.DocId.Parser, new[]{ "Code" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Business.ExpressService.ActiveData), global::Grpc.Business.ExpressService.ActiveData.Parser, new[]{ "Total", "Zap", "Nds", "Deb", "Fin", "Mon", "Oth" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Business.ExpressService.Pair), global::Grpc.Business.ExpressService.Pair.Parser, new[]{ "Key", "Value", "Name" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class GetBusinessActivityRequest : pb::IMessage<GetBusinessActivityRequest> {
-    private static readonly pb::MessageParser<GetBusinessActivityRequest> _parser = new pb::MessageParser<GetBusinessActivityRequest>(() => new GetBusinessActivityRequest());
+  public sealed partial class DocId : pb::IMessage<DocId> {
+    private static readonly pb::MessageParser<DocId> _parser = new pb::MessageParser<DocId>(() => new DocId());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetBusinessActivityRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<DocId> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.Express.ExpressService.ExpressServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Grpc.Business.ExpressService.ExpressServiceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -67,68 +60,54 @@ namespace Grpc.Express.ExpressService {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetBusinessActivityRequest() {
+    public DocId() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetBusinessActivityRequest(GetBusinessActivityRequest other) : this() {
-      base_ = other.base_;
-      current_ = other.current_;
+    public DocId(DocId other) : this() {
+      code_ = other.code_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetBusinessActivityRequest Clone() {
-      return new GetBusinessActivityRequest(this);
+    public DocId Clone() {
+      return new DocId(this);
     }
 
-    /// <summary>Field number for the "base" field.</summary>
-    public const int BaseFieldNumber = 1;
-    private int base_;
+    /// <summary>Field number for the "code" field.</summary>
+    public const int CodeFieldNumber = 1;
+    private int code_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Base {
-      get { return base_; }
+    public int Code {
+      get { return code_; }
       set {
-        base_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "current" field.</summary>
-    public const int CurrentFieldNumber = 2;
-    private int current_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Current {
-      get { return current_; }
-      set {
-        current_ = value;
+        code_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as GetBusinessActivityRequest);
+      return Equals(other as DocId);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetBusinessActivityRequest other) {
+    public bool Equals(DocId other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Base != other.Base) return false;
-      if (Current != other.Current) return false;
+      if (Code != other.Code) return false;
       return true;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Base != 0) hash ^= Base.GetHashCode();
-      if (Current != 0) hash ^= Current.GetHashCode();
+      if (Code != 0) hash ^= Code.GetHashCode();
       return hash;
     }
 
@@ -139,38 +118,28 @@ namespace Grpc.Express.ExpressService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Base != 0) {
+      if (Code != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(Base);
-      }
-      if (Current != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Current);
+        output.WriteInt32(Code);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Base != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Base);
-      }
-      if (Current != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Current);
+      if (Code != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetBusinessActivityRequest other) {
+    public void MergeFrom(DocId other) {
       if (other == null) {
         return;
       }
-      if (other.Base != 0) {
-        Base = other.Base;
-      }
-      if (other.Current != 0) {
-        Current = other.Current;
+      if (other.Code != 0) {
+        Code = other.Code;
       }
     }
 
@@ -183,11 +152,7 @@ namespace Grpc.Express.ExpressService {
             input.SkipLastField();
             break;
           case 8: {
-            Base = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            Current = input.ReadInt32();
+            Code = input.ReadInt32();
             break;
           }
         }
@@ -196,14 +161,14 @@ namespace Grpc.Express.ExpressService {
 
   }
 
-  public sealed partial class ActivityRowResponse : pb::IMessage<ActivityRowResponse> {
-    private static readonly pb::MessageParser<ActivityRowResponse> _parser = new pb::MessageParser<ActivityRowResponse>(() => new ActivityRowResponse());
+  public sealed partial class ActiveData : pb::IMessage<ActiveData> {
+    private static readonly pb::MessageParser<ActiveData> _parser = new pb::MessageParser<ActiveData>(() => new ActiveData());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ActivityRowResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<ActiveData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.Express.ExpressService.ExpressServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Grpc.Business.ExpressService.ExpressServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -212,82 +177,138 @@ namespace Grpc.Express.ExpressService {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActivityRowResponse() {
+    public ActiveData() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActivityRowResponse(ActivityRowResponse other) : this() {
-      base_ = other.base_;
-      current_ = other.current_;
-      dinamyc_ = other.dinamyc_;
+    public ActiveData(ActiveData other) : this() {
+      Total = other.total_ != null ? other.Total.Clone() : null;
+      Zap = other.zap_ != null ? other.Zap.Clone() : null;
+      Nds = other.nds_ != null ? other.Nds.Clone() : null;
+      Deb = other.deb_ != null ? other.Deb.Clone() : null;
+      Fin = other.fin_ != null ? other.Fin.Clone() : null;
+      Mon = other.mon_ != null ? other.Mon.Clone() : null;
+      Oth = other.oth_ != null ? other.Oth.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ActivityRowResponse Clone() {
-      return new ActivityRowResponse(this);
+    public ActiveData Clone() {
+      return new ActiveData(this);
     }
 
-    /// <summary>Field number for the "base" field.</summary>
-    public const int BaseFieldNumber = 1;
-    private double base_;
+    /// <summary>Field number for the "total" field.</summary>
+    public const int TotalFieldNumber = 1;
+    private global::Grpc.Business.ExpressService.Pair total_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double Base {
-      get { return base_; }
+    public global::Grpc.Business.ExpressService.Pair Total {
+      get { return total_; }
       set {
-        base_ = value;
+        total_ = value;
       }
     }
 
-    /// <summary>Field number for the "current" field.</summary>
-    public const int CurrentFieldNumber = 2;
-    private double current_;
+    /// <summary>Field number for the "zap" field.</summary>
+    public const int ZapFieldNumber = 2;
+    private global::Grpc.Business.ExpressService.Pair zap_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double Current {
-      get { return current_; }
+    public global::Grpc.Business.ExpressService.Pair Zap {
+      get { return zap_; }
       set {
-        current_ = value;
+        zap_ = value;
       }
     }
 
-    /// <summary>Field number for the "dinamyc" field.</summary>
-    public const int DinamycFieldNumber = 3;
-    private double dinamyc_;
+    /// <summary>Field number for the "nds" field.</summary>
+    public const int NdsFieldNumber = 3;
+    private global::Grpc.Business.ExpressService.Pair nds_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double Dinamyc {
-      get { return dinamyc_; }
+    public global::Grpc.Business.ExpressService.Pair Nds {
+      get { return nds_; }
       set {
-        dinamyc_ = value;
+        nds_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "deb" field.</summary>
+    public const int DebFieldNumber = 4;
+    private global::Grpc.Business.ExpressService.Pair deb_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Grpc.Business.ExpressService.Pair Deb {
+      get { return deb_; }
+      set {
+        deb_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "fin" field.</summary>
+    public const int FinFieldNumber = 5;
+    private global::Grpc.Business.ExpressService.Pair fin_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Grpc.Business.ExpressService.Pair Fin {
+      get { return fin_; }
+      set {
+        fin_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mon" field.</summary>
+    public const int MonFieldNumber = 6;
+    private global::Grpc.Business.ExpressService.Pair mon_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Grpc.Business.ExpressService.Pair Mon {
+      get { return mon_; }
+      set {
+        mon_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "oth" field.</summary>
+    public const int OthFieldNumber = 7;
+    private global::Grpc.Business.ExpressService.Pair oth_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Grpc.Business.ExpressService.Pair Oth {
+      get { return oth_; }
+      set {
+        oth_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ActivityRowResponse);
+      return Equals(other as ActiveData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ActivityRowResponse other) {
+    public bool Equals(ActiveData other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Base != other.Base) return false;
-      if (Current != other.Current) return false;
-      if (Dinamyc != other.Dinamyc) return false;
+      if (!object.Equals(Total, other.Total)) return false;
+      if (!object.Equals(Zap, other.Zap)) return false;
+      if (!object.Equals(Nds, other.Nds)) return false;
+      if (!object.Equals(Deb, other.Deb)) return false;
+      if (!object.Equals(Fin, other.Fin)) return false;
+      if (!object.Equals(Mon, other.Mon)) return false;
+      if (!object.Equals(Oth, other.Oth)) return false;
       return true;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Base != 0D) hash ^= Base.GetHashCode();
-      if (Current != 0D) hash ^= Current.GetHashCode();
-      if (Dinamyc != 0D) hash ^= Dinamyc.GetHashCode();
+      if (total_ != null) hash ^= Total.GetHashCode();
+      if (zap_ != null) hash ^= Zap.GetHashCode();
+      if (nds_ != null) hash ^= Nds.GetHashCode();
+      if (deb_ != null) hash ^= Deb.GetHashCode();
+      if (fin_ != null) hash ^= Fin.GetHashCode();
+      if (mon_ != null) hash ^= Mon.GetHashCode();
+      if (oth_ != null) hash ^= Oth.GetHashCode();
       return hash;
     }
 
@@ -298,338 +319,109 @@ namespace Grpc.Express.ExpressService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Base != 0D) {
-        output.WriteRawTag(9);
-        output.WriteDouble(Base);
-      }
-      if (Current != 0D) {
-        output.WriteRawTag(17);
-        output.WriteDouble(Current);
-      }
-      if (Dinamyc != 0D) {
-        output.WriteRawTag(25);
-        output.WriteDouble(Dinamyc);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Base != 0D) {
-        size += 1 + 8;
-      }
-      if (Current != 0D) {
-        size += 1 + 8;
-      }
-      if (Dinamyc != 0D) {
-        size += 1 + 8;
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ActivityRowResponse other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Base != 0D) {
-        Base = other.Base;
-      }
-      if (other.Current != 0D) {
-        Current = other.Current;
-      }
-      if (other.Dinamyc != 0D) {
-        Dinamyc = other.Dinamyc;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            input.SkipLastField();
-            break;
-          case 9: {
-            Base = input.ReadDouble();
-            break;
-          }
-          case 17: {
-            Current = input.ReadDouble();
-            break;
-          }
-          case 25: {
-            Dinamyc = input.ReadDouble();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class GetBusinessActivityResponse : pb::IMessage<GetBusinessActivityResponse> {
-    private static readonly pb::MessageParser<GetBusinessActivityResponse> _parser = new pb::MessageParser<GetBusinessActivityResponse>(() => new GetBusinessActivityResponse());
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetBusinessActivityResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.Express.ExpressService.ExpressServiceReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetBusinessActivityResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetBusinessActivityResponse(GetBusinessActivityResponse other) : this() {
-      TurnOfDeb = other.turnOfDeb_ != null ? other.TurnOfDeb.Clone() : null;
-      TimeRedeptionDeb = other.timeRedeptionDeb_ != null ? other.TimeRedeptionDeb.Clone() : null;
-      TurnStock = other.turnStock_ != null ? other.TurnStock.Clone() : null;
-      TimeStock = other.timeStock_ != null ? other.TimeStock.Clone() : null;
-      TurnCred = other.turnCred_ != null ? other.TurnCred.Clone() : null;
-      TimeCred = other.timeCred_ != null ? other.TimeCred.Clone() : null;
-      FinStrength = other.finStrength_ != null ? other.FinStrength.Clone() : null;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetBusinessActivityResponse Clone() {
-      return new GetBusinessActivityResponse(this);
-    }
-
-    /// <summary>Field number for the "TurnOfDeb" field.</summary>
-    public const int TurnOfDebFieldNumber = 1;
-    private global::Grpc.Express.ExpressService.ActivityRowResponse turnOfDeb_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Grpc.Express.ExpressService.ActivityRowResponse TurnOfDeb {
-      get { return turnOfDeb_; }
-      set {
-        turnOfDeb_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "TimeRedeptionDeb" field.</summary>
-    public const int TimeRedeptionDebFieldNumber = 2;
-    private global::Grpc.Express.ExpressService.ActivityRowResponse timeRedeptionDeb_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Grpc.Express.ExpressService.ActivityRowResponse TimeRedeptionDeb {
-      get { return timeRedeptionDeb_; }
-      set {
-        timeRedeptionDeb_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "TurnStock" field.</summary>
-    public const int TurnStockFieldNumber = 3;
-    private global::Grpc.Express.ExpressService.ActivityRowResponse turnStock_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Grpc.Express.ExpressService.ActivityRowResponse TurnStock {
-      get { return turnStock_; }
-      set {
-        turnStock_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "TimeStock" field.</summary>
-    public const int TimeStockFieldNumber = 4;
-    private global::Grpc.Express.ExpressService.ActivityRowResponse timeStock_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Grpc.Express.ExpressService.ActivityRowResponse TimeStock {
-      get { return timeStock_; }
-      set {
-        timeStock_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "TurnCred" field.</summary>
-    public const int TurnCredFieldNumber = 5;
-    private global::Grpc.Express.ExpressService.ActivityRowResponse turnCred_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Grpc.Express.ExpressService.ActivityRowResponse TurnCred {
-      get { return turnCred_; }
-      set {
-        turnCred_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "TimeCred" field.</summary>
-    public const int TimeCredFieldNumber = 6;
-    private global::Grpc.Express.ExpressService.ActivityRowResponse timeCred_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Grpc.Express.ExpressService.ActivityRowResponse TimeCred {
-      get { return timeCred_; }
-      set {
-        timeCred_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "FinStrength" field.</summary>
-    public const int FinStrengthFieldNumber = 7;
-    private global::Grpc.Express.ExpressService.ActivityRowResponse finStrength_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Grpc.Express.ExpressService.ActivityRowResponse FinStrength {
-      get { return finStrength_; }
-      set {
-        finStrength_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as GetBusinessActivityResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetBusinessActivityResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(TurnOfDeb, other.TurnOfDeb)) return false;
-      if (!object.Equals(TimeRedeptionDeb, other.TimeRedeptionDeb)) return false;
-      if (!object.Equals(TurnStock, other.TurnStock)) return false;
-      if (!object.Equals(TimeStock, other.TimeStock)) return false;
-      if (!object.Equals(TurnCred, other.TurnCred)) return false;
-      if (!object.Equals(TimeCred, other.TimeCred)) return false;
-      if (!object.Equals(FinStrength, other.FinStrength)) return false;
-      return true;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (turnOfDeb_ != null) hash ^= TurnOfDeb.GetHashCode();
-      if (timeRedeptionDeb_ != null) hash ^= TimeRedeptionDeb.GetHashCode();
-      if (turnStock_ != null) hash ^= TurnStock.GetHashCode();
-      if (timeStock_ != null) hash ^= TimeStock.GetHashCode();
-      if (turnCred_ != null) hash ^= TurnCred.GetHashCode();
-      if (timeCred_ != null) hash ^= TimeCred.GetHashCode();
-      if (finStrength_ != null) hash ^= FinStrength.GetHashCode();
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (turnOfDeb_ != null) {
+      if (total_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(TurnOfDeb);
+        output.WriteMessage(Total);
       }
-      if (timeRedeptionDeb_ != null) {
+      if (zap_ != null) {
         output.WriteRawTag(18);
-        output.WriteMessage(TimeRedeptionDeb);
+        output.WriteMessage(Zap);
       }
-      if (turnStock_ != null) {
+      if (nds_ != null) {
         output.WriteRawTag(26);
-        output.WriteMessage(TurnStock);
+        output.WriteMessage(Nds);
       }
-      if (timeStock_ != null) {
+      if (deb_ != null) {
         output.WriteRawTag(34);
-        output.WriteMessage(TimeStock);
+        output.WriteMessage(Deb);
       }
-      if (turnCred_ != null) {
+      if (fin_ != null) {
         output.WriteRawTag(42);
-        output.WriteMessage(TurnCred);
+        output.WriteMessage(Fin);
       }
-      if (timeCred_ != null) {
+      if (mon_ != null) {
         output.WriteRawTag(50);
-        output.WriteMessage(TimeCred);
+        output.WriteMessage(Mon);
       }
-      if (finStrength_ != null) {
+      if (oth_ != null) {
         output.WriteRawTag(58);
-        output.WriteMessage(FinStrength);
+        output.WriteMessage(Oth);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (turnOfDeb_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TurnOfDeb);
+      if (total_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Total);
       }
-      if (timeRedeptionDeb_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeRedeptionDeb);
+      if (zap_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Zap);
       }
-      if (turnStock_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TurnStock);
+      if (nds_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Nds);
       }
-      if (timeStock_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeStock);
+      if (deb_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Deb);
       }
-      if (turnCred_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TurnCred);
+      if (fin_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Fin);
       }
-      if (timeCred_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeCred);
+      if (mon_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Mon);
       }
-      if (finStrength_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinStrength);
+      if (oth_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Oth);
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetBusinessActivityResponse other) {
+    public void MergeFrom(ActiveData other) {
       if (other == null) {
         return;
       }
-      if (other.turnOfDeb_ != null) {
-        if (turnOfDeb_ == null) {
-          turnOfDeb_ = new global::Grpc.Express.ExpressService.ActivityRowResponse();
+      if (other.total_ != null) {
+        if (total_ == null) {
+          total_ = new global::Grpc.Business.ExpressService.Pair();
         }
-        TurnOfDeb.MergeFrom(other.TurnOfDeb);
+        Total.MergeFrom(other.Total);
       }
-      if (other.timeRedeptionDeb_ != null) {
-        if (timeRedeptionDeb_ == null) {
-          timeRedeptionDeb_ = new global::Grpc.Express.ExpressService.ActivityRowResponse();
+      if (other.zap_ != null) {
+        if (zap_ == null) {
+          zap_ = new global::Grpc.Business.ExpressService.Pair();
         }
-        TimeRedeptionDeb.MergeFrom(other.TimeRedeptionDeb);
+        Zap.MergeFrom(other.Zap);
       }
-      if (other.turnStock_ != null) {
-        if (turnStock_ == null) {
-          turnStock_ = new global::Grpc.Express.ExpressService.ActivityRowResponse();
+      if (other.nds_ != null) {
+        if (nds_ == null) {
+          nds_ = new global::Grpc.Business.ExpressService.Pair();
         }
-        TurnStock.MergeFrom(other.TurnStock);
+        Nds.MergeFrom(other.Nds);
       }
-      if (other.timeStock_ != null) {
-        if (timeStock_ == null) {
-          timeStock_ = new global::Grpc.Express.ExpressService.ActivityRowResponse();
+      if (other.deb_ != null) {
+        if (deb_ == null) {
+          deb_ = new global::Grpc.Business.ExpressService.Pair();
         }
-        TimeStock.MergeFrom(other.TimeStock);
+        Deb.MergeFrom(other.Deb);
       }
-      if (other.turnCred_ != null) {
-        if (turnCred_ == null) {
-          turnCred_ = new global::Grpc.Express.ExpressService.ActivityRowResponse();
+      if (other.fin_ != null) {
+        if (fin_ == null) {
+          fin_ = new global::Grpc.Business.ExpressService.Pair();
         }
-        TurnCred.MergeFrom(other.TurnCred);
+        Fin.MergeFrom(other.Fin);
       }
-      if (other.timeCred_ != null) {
-        if (timeCred_ == null) {
-          timeCred_ = new global::Grpc.Express.ExpressService.ActivityRowResponse();
+      if (other.mon_ != null) {
+        if (mon_ == null) {
+          mon_ = new global::Grpc.Business.ExpressService.Pair();
         }
-        TimeCred.MergeFrom(other.TimeCred);
+        Mon.MergeFrom(other.Mon);
       }
-      if (other.finStrength_ != null) {
-        if (finStrength_ == null) {
-          finStrength_ = new global::Grpc.Express.ExpressService.ActivityRowResponse();
+      if (other.oth_ != null) {
+        if (oth_ == null) {
+          oth_ = new global::Grpc.Business.ExpressService.Pair();
         }
-        FinStrength.MergeFrom(other.FinStrength);
+        Oth.MergeFrom(other.Oth);
       }
     }
 
@@ -642,52 +434,225 @@ namespace Grpc.Express.ExpressService {
             input.SkipLastField();
             break;
           case 10: {
-            if (turnOfDeb_ == null) {
-              turnOfDeb_ = new global::Grpc.Express.ExpressService.ActivityRowResponse();
+            if (total_ == null) {
+              total_ = new global::Grpc.Business.ExpressService.Pair();
             }
-            input.ReadMessage(turnOfDeb_);
+            input.ReadMessage(total_);
             break;
           }
           case 18: {
-            if (timeRedeptionDeb_ == null) {
-              timeRedeptionDeb_ = new global::Grpc.Express.ExpressService.ActivityRowResponse();
+            if (zap_ == null) {
+              zap_ = new global::Grpc.Business.ExpressService.Pair();
             }
-            input.ReadMessage(timeRedeptionDeb_);
+            input.ReadMessage(zap_);
             break;
           }
           case 26: {
-            if (turnStock_ == null) {
-              turnStock_ = new global::Grpc.Express.ExpressService.ActivityRowResponse();
+            if (nds_ == null) {
+              nds_ = new global::Grpc.Business.ExpressService.Pair();
             }
-            input.ReadMessage(turnStock_);
+            input.ReadMessage(nds_);
             break;
           }
           case 34: {
-            if (timeStock_ == null) {
-              timeStock_ = new global::Grpc.Express.ExpressService.ActivityRowResponse();
+            if (deb_ == null) {
+              deb_ = new global::Grpc.Business.ExpressService.Pair();
             }
-            input.ReadMessage(timeStock_);
+            input.ReadMessage(deb_);
             break;
           }
           case 42: {
-            if (turnCred_ == null) {
-              turnCred_ = new global::Grpc.Express.ExpressService.ActivityRowResponse();
+            if (fin_ == null) {
+              fin_ = new global::Grpc.Business.ExpressService.Pair();
             }
-            input.ReadMessage(turnCred_);
+            input.ReadMessage(fin_);
             break;
           }
           case 50: {
-            if (timeCred_ == null) {
-              timeCred_ = new global::Grpc.Express.ExpressService.ActivityRowResponse();
+            if (mon_ == null) {
+              mon_ = new global::Grpc.Business.ExpressService.Pair();
             }
-            input.ReadMessage(timeCred_);
+            input.ReadMessage(mon_);
             break;
           }
           case 58: {
-            if (finStrength_ == null) {
-              finStrength_ = new global::Grpc.Express.ExpressService.ActivityRowResponse();
+            if (oth_ == null) {
+              oth_ = new global::Grpc.Business.ExpressService.Pair();
             }
-            input.ReadMessage(finStrength_);
+            input.ReadMessage(oth_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Pair : pb::IMessage<Pair> {
+    private static readonly pb::MessageParser<Pair> _parser = new pb::MessageParser<Pair>(() => new Pair());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Pair> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Grpc.Business.ExpressService.ExpressServiceReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Pair() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Pair(Pair other) : this() {
+      key_ = other.key_;
+      value_ = other.value_;
+      name_ = other.name_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Pair Clone() {
+      return new Pair(this);
+    }
+
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 1;
+    private int key_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Key {
+      get { return key_; }
+      set {
+        key_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 2;
+    private float value_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Value {
+      get { return value_; }
+      set {
+        value_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 3;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Pair);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Pair other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Key != other.Key) return false;
+      if (Value != other.Value) return false;
+      if (Name != other.Name) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Key != 0) hash ^= Key.GetHashCode();
+      if (Value != 0F) hash ^= Value.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Key != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Key);
+      }
+      if (Value != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Value);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Name);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Key != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Key);
+      }
+      if (Value != 0F) {
+        size += 1 + 4;
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Pair other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Key != 0) {
+        Key = other.Key;
+      }
+      if (other.Value != 0F) {
+        Value = other.Value;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            Key = input.ReadInt32();
+            break;
+          }
+          case 21: {
+            Value = input.ReadFloat();
+            break;
+          }
+          case 26: {
+            Name = input.ReadString();
             break;
           }
         }
