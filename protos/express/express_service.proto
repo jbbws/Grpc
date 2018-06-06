@@ -23,6 +23,6 @@ message Pair {
     string name = 3;
 }
 
-service ExpessService {
+service BusinessService {
     rpc GetActive(DocId) returns (ActiveData);
 }
