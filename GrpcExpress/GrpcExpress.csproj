@@ -13,7 +13,7 @@
     <ProjectReference Include="..\GrpcBase\GrpcBase.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <ProtoFiles Include="$(MSBuildProjectDirectory)\..\protos\express\*_service.proto" />
+    <ProtoFiles Include="$(MSBuildProjectDirectory)\..\protos\express\*.proto" />
     <None Include="@(ProtoFiles)" />
   </ItemGroup>
   <PropertyGroup>
