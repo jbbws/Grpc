@@ -34,9 +34,19 @@ message CompanyData {
     repeated core.DocumentMeta docs = 2; 
 } 
 
+message SeriesByDoc {
+    int32 code = 1;
+    repeated int32 series = 2;
+}
+
+message SeriesList {
+    repeated core.Series data = 1;
+}
+
 service StoreService {
     rpc GetCompanyList(CompaniesInfo) returns (CompaniesInfoList);  //to ComboBox
     rpc GetCompanyData(CompanyById) returns (CompanyDataSrc); //to ViewmModel
     rpc GetCompanyGrid(CompaniesInfo) returns (CompaniesGrid); // to CompanyGrid
     rpc GetDocsGrid(CompanyById) returns (DocsGrid); // to DocsGird
+    rpc GetSeries(SeriesByDoc) returns (SeriesList);
 }
