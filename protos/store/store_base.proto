@@ -19,7 +19,6 @@ message Document {
 message Series {
     int32 code = 1;
     int64 value = 2;
-    string name = 3;
 }
 
 message Company {
